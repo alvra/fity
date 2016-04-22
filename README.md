@@ -36,6 +36,7 @@ The following is a complete list of all requirements.
 
 * `six`
 * `pillow`
+* `mutagen`
 * `pygments`
 * `PyPDF2`
 * `python-dateutil`

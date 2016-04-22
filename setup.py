@@ -17,6 +17,8 @@ setup(
         'six',
         # inspecting images
         'pillow',
+        # inspecting audio
+        'mutagen',
         # detecting scripts
         'pygments',
         # inspecting pdfs
