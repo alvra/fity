@@ -26,7 +26,11 @@ def create_utf_filetype(encoding, name, signature):
     globals()[clsname] = type(
         clsname,
         (UnicodeMixin, TextType),
-        dict(signature=hexbytes(signature), name=name, encoding=encoding),
+        dict(
+             signature=hexbytes(signature),
+             encoding=encoding,
+             encoding_name=name,
+        ),
     )
 
 
