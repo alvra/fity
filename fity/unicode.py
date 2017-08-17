@@ -12,12 +12,12 @@ class UnicodeMixin(object):
 
     @classmethod
     def extract(cls, file):
-        start = file.read(1024)[self.signature.length:]
-        assert isinstance(start, six.bytes_type)
+        start = file.read(1024)[cls.signature.length:]
+        assert isinstance(start, six.binary_type)
         try:
-            start.decode(self.encoding)
+            start.decode(cls.encoding)
         except UnicodeDecodeError:
-            raise ExtractionError("Could not decode as %s" % self.encoding_name)
+            raise ExtractionError("Could not decode as %s" % cls.encoding_name)
         return cls(file, dict(encoding=cls.encoding_name))
 
 
